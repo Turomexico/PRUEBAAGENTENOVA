@@ -493,9 +493,9 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
-        /* Sección de servicios - MODIFICADA: Cuadros uno sobre otro */
+        /* Sección de servicios - MODIFICADA: Ahora en HORIZONTAL */
         .services-section {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 3rem auto;
             padding: 0 2rem;
         }
@@ -520,59 +520,55 @@
             font-weight: 400;
         }
 
-        /* SERVICIOS EN COLUMNA VERTICAL - CORREGIDO */
-        .services-vertical {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            max-width: 600px;
+        /* SERVICIOS EN HORIZONTAL - NUEVO DISEÑO */
+        .services-horizontal {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .service-item-vertical {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            padding: 1rem 1.2rem;
+        .service-item-horizontal {
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
-            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .service-item-vertical:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        .service-item-horizontal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
-        .service-icon-vertical {
-            width: 45px;
-            height: 45px;
+        .service-icon-horizontal {
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, #4a6fa5, #6d9dc5);
-            border-radius: 10px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
-            flex-shrink: 0;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .service-info-vertical {
-            flex-grow: 1;
-        }
-
-        .service-info-vertical h4 {
+        .service-info-horizontal h4 {
             color: #333;
-            margin-bottom: 0.2rem;
-            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
             font-weight: 600;
         }
 
-        .service-info-vertical p {
+        .service-info-horizontal p {
             color: #666;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             line-height: 1.4;
             font-weight: 400;
         }
@@ -1015,7 +1011,7 @@
             background: rgba(255, 255, 255, 0.3);
         }
 
-        /* Sección Explora CDMX */
+        /* Sección Explora CDMX - MÁS PEQUEÑA */
         .explore-section {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 4rem 0;
@@ -1051,12 +1047,12 @@
 
         .attraction-image {
             width: 100%;
-            height: 220px;
+            height: 180px; /* Reducido de 220px a 180px */
             object-fit: cover;
         }
 
         .attraction-content {
-            padding: 1.5rem;
+            padding: 1.2rem; /* Reducido de 1.5rem */
         }
 
         .attraction-header {
@@ -1069,7 +1065,7 @@
         .attraction-header h3 {
             color: #4a6fa5;
             margin-bottom: 0;
-            font-size: 1.3rem;
+            font-size: 1.2rem; /* Reducido de 1.3rem */
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
         }
@@ -1078,8 +1074,8 @@
             background: #4a6fa5;
             color: white;
             border: none;
-            width: 36px;
-            height: 36px;
+            width: 32px; /* Reducido de 36px */
+            height: 32px; /* Reducido de 36px */
             border-radius: 50%;
             cursor: pointer;
             display: flex;
@@ -1096,6 +1092,7 @@
 
         .attraction-toggle-btn i {
             transition: transform 0.3s;
+            font-size: 0.9rem; /* Reducido */
         }
 
         .attraction-toggle-btn.expanded i {
@@ -1112,14 +1109,14 @@
         .attraction-info.expanded {
             max-height: 500px;
             opacity: 1;
-            margin-top: 1rem;
+            margin-top: 0.8rem; /* Reducido de 1rem */
         }
 
         .attraction-info p {
             color: #555;
             line-height: 1.6;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
+            margin-bottom: 0.8rem; /* Reducido de 1rem */
+            font-size: 0.9rem; /* Reducido de 0.95rem */
             font-weight: 400;
         }
 
@@ -1127,15 +1124,15 @@
             display: inline-block;
             background-color: #f0f7ff;
             color: #4a6fa5;
-            padding: 0.3rem 0.8rem;
+            padding: 0.2rem 0.6rem; /* Reducido */
             border-radius: 15px;
-            font-size: 0.8rem;
+            font-size: 0.75rem; /* Reducido de 0.8rem */
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem; /* Reducido de 1rem */
         }
 
         .attraction-actions {
-            margin-top: 1rem;
+            margin-top: 0.8rem; /* Reducido de 1rem */
             display: flex;
             gap: 0.5rem;
         }
@@ -1144,7 +1141,7 @@
             background-color: #4a6fa5;
             color: white;
             border: none;
-            padding: 0.6rem 1.2rem;
+            padding: 0.5rem 1rem; /* Reducido */
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
@@ -1154,7 +1151,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            font-size: 0.9rem;
+            font-size: 0.85rem; /* Reducido de 0.9rem */
             width: 100%;
             font-family: 'Poppins', sans-serif;
         }
@@ -1476,11 +1473,13 @@
             flex-direction: column;
             overflow: hidden;
             transition: all 0.3s ease;
+            transform-origin: bottom left;
         }
 
         /* Animación para abrir el chatbot */
-        .chatbot-window[style*="display: flex"] {
-            animation: chatbotOpen 0.3s ease-out;
+        .chatbot-window.open {
+            display: flex;
+            animation: chatbotOpen 0.3s ease-out forwards;
         }
 
         @keyframes chatbotOpen {
@@ -1614,6 +1613,34 @@
 
         .chatbot-send-btn:hover {
             background: linear-gradient(45deg, #3a5a8a, #5d8db5);
+        }
+
+        /* NUEVO: Footer del chatbot con botón Terminar Conversación */
+        .chatbot-footer {
+            padding: 0.8rem 1.5rem;
+            border-top: 1px solid #e0e0e0;
+            background: white;
+            text-align: center;
+        }
+
+        .chatbot-end-btn {
+            background: #ff5a5f;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chatbot-end-btn:hover {
+            background: #e04a50;
+            transform: scale(1.05);
         }
 
         .quick-options {
@@ -1926,6 +1953,10 @@
             .fifa-players {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .services-horizontal {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -2021,13 +2052,8 @@
                 transform: translateX(-50%);
             }
             
-            /* Ajustes para servicios vertical en móvil */
-            .services-vertical {
-                max-width: 100%;
-            }
-            
-            .service-item-vertical {
-                padding: 1rem;
+            .services-horizontal {
+                grid-template-columns: 1fr;
             }
             
             .visual-options {
@@ -2348,6 +2374,12 @@
                     <i class="fas fa-paper-plane"></i>
                 </button>
             </div>
+            <!-- NUEVO: Footer con botón Terminar Conversación -->
+            <div class="chatbot-footer" id="chatbotFooter" style="display: none;">
+                <button class="chatbot-end-btn" id="endConversationBtn">
+                    <i class="fas fa-times-circle"></i> Terminar Conversación
+                </button>
+            </div>
         </div>
     </div>
 
@@ -2453,87 +2485,87 @@
             </div>
         </section>
 
-        <!-- Sección de Servicios - MODIFICADA: Cuadros uno sobre otro -->
+        <!-- Sección de Servicios - MODIFICADA: Ahora en HORIZONTAL -->
         <section class="services-section" id="servicios">
             <h2 class="section-title">Nuestros Servicios</h2>
             <p class="section-subtitle">Todo lo que necesitas para una estancia perfecta en la Ciudad de México</p>
             
-            <div class="services-vertical">
-                <div class="service-item-vertical">
-                    <div class="service-icon-vertical">
+            <div class="services-horizontal">
+                <div class="service-item-horizontal">
+                    <div class="service-icon-horizontal">
                         <i class="fas fa-wifi"></i>
                     </div>
-                    <div class="service-info-vertical">
+                    <div class="service-info-horizontal">
                         <h4>WiFi de Alta Velocidad</h4>
                         <p>Conexión rápida en todas las propiedades</p>
                     </div>
                 </div>
                 
-                <div class="service-item-vertical">
-                    <div class="service-icon-vertical">
+                <div class="service-item-horizontal">
+                    <div class="service-icon-horizontal">
                         <i class="fas fa-utensils"></i>
                     </div>
-                    <div class="service-info-vertical">
+                    <div class="service-info-horizontal">
                         <h4>Cocina Equipada</h4>
                         <p>Electrodomésticos y utensilios completos</p>
                     </div>
                 </div>
                 
-                <div class="service-item-vertical">
-                    <div class="service-icon-vertical">
+                <div class="service-item-horizontal">
+                    <div class="service-icon-horizontal">
                         <i class="fas fa-tv"></i>
                     </div>
-                    <div class="service-info-vertical">
+                    <div class="service-info-horizontal">
                         <h4>TV y Entretenimiento</h4>
                         <p>Smart TV con plataformas de streaming</p>
                     </div>
                 </div>
                 
-                <div class="service-item-vertical">
-                    <div class="service-icon-vertical">
+                <div class="service-item-horizontal">
+                    <div class="service-icon-horizontal">
                         <i class="fas fa-concierge-bell"></i>
                     </div>
-                    <div class="service-info-vertical">
+                    <div class="service-info-horizontal">
                         <h4>Recepción 24/7</h4>
                         <p>Asistencia disponible todo el día</p>
                     </div>
                 </div>
                 
-                <div class="service-item-vertical">
-                    <div class="service-icon-vertical">
+                <div class="service-item-horizontal">
+                    <div class="service-icon-horizontal">
                         <i class="fas fa-suitcase"></i>
                     </div>
-                    <div class="service-info-vertical">
+                    <div class="service-info-horizontal">
                         <h4>Consigna de Equipajes</h4>
                         <p>Almacenamiento seguro gratuito</p>
                     </div>
                 </div>
                 
-                <div class="service-item-vertical">
-                    <div class="service-icon-vertical">
+                <div class="service-item-horizontal">
+                    <div class="service-icon-horizontal">
                         <i class="fas fa-tshirt"></i>
                     </div>
-                    <div class="service-info-vertical">
+                    <div class="service-info-horizontal">
                         <h4>Lavandería</h4>
                         <p>Servicio por peso disponible</p>
                     </div>
                 </div>
                 
-                <div class="service-item-vertical">
-                    <div class="service-icon-vertical">
+                <div class="service-item-horizontal">
+                    <div class="service-icon-horizontal">
                         <i class="fas fa-broom"></i>
                     </div>
-                    <div class="service-info-vertical">
+                    <div class="service-info-horizontal">
                         <h4>Limpieza Opcional</h4>
                         <p>Servicios adicionales bajo solicitud</p>
                     </div>
                 </div>
                 
-                <div class="service-item-vertical">
-                    <div class="service-icon-vertical">
+                <div class="service-item-horizontal">
+                    <div class="service-icon-horizontal">
                         <i class="fas fa-car"></i>
                     </div>
-                    <div class="service-info-vertical">
+                    <div class="service-info-horizontal">
                         <h4>Transporte</h4>
                         <p>Apoyo con Uber, Didi y recomendaciones</p>
                     </div>
@@ -2553,7 +2585,7 @@
             </div>
         </section>
 
-        <!-- Sección Explora CDMX -->
+        <!-- Sección Explora CDMX (MÁS PEQUEÑA) -->
         <section class="explore-section" id="explora-cdmx">
             <div class="explore-container">
                 <h2 class="section-title">Explora la Ciudad de México</h2>
@@ -3467,11 +3499,21 @@
             const chatbotSendBtn = document.getElementById('chatbotSendBtn');
             const chatbotInput = document.getElementById('chatbotInput');
             const chatbotMessages = document.getElementById('chatbotMessages');
+            const chatbotFooter = document.getElementById('chatbotFooter');
+            const endConversationBtn = document.getElementById('endConversationBtn');
 
             // Abrir/cerrar chatbot
             chatbotToggle.addEventListener('click', () => {
-                chatbotWindow.style.display = chatbotWindow.style.display === 'flex' ? 'none' : 'flex';
-                if (chatbotWindow.style.display === 'flex') {
+                if (chatbotWindow.classList.contains('open')) {
+                    chatbotWindow.classList.remove('open');
+                    setTimeout(() => {
+                        chatbotWindow.style.display = 'none';
+                    }, 300);
+                } else {
+                    chatbotWindow.style.display = 'flex';
+                    setTimeout(() => {
+                        chatbotWindow.classList.add('open');
+                    }, 10);
                     chatbotInput.focus();
                     // Mostrar mensaje de bienvenida si es la primera vez
                     if (chatbotState.step === 0) {
@@ -3481,7 +3523,32 @@
             });
 
             closeChatbot.addEventListener('click', () => {
-                chatbotWindow.style.display = 'none';
+                chatbotWindow.classList.remove('open');
+                setTimeout(() => {
+                    chatbotWindow.style.display = 'none';
+                }, 300);
+            });
+
+            // NUEVO: Botón para terminar conversación
+            endConversationBtn.addEventListener('click', () => {
+                resetChatbotState();
+                chatbotFooter.style.display = 'none';
+                
+                // Limpiar mensajes
+                chatbotMessages.innerHTML = '';
+                
+                // Mostrar mensaje de despedida
+                addMessageToChatbot('Conversación terminada. ¡Espero haberte ayudado! Si necesitas algo más, no dudes en preguntar.', 'bot');
+                
+                // Mostrar opciones después de un breve delay
+                setTimeout(() => {
+                    showQuickOptions([
+                        "Quiero hacer una reserva",
+                        "Ver opciones de propiedades",
+                        "Lugares turísticos en CDMX",
+                        "Información sobre FIFA 2026"
+                    ]);
+                }, 1000);
             });
 
             // Enviar mensaje al presionar Enter
@@ -3501,6 +3568,11 @@
                 // Agregar mensaje del usuario
                 addMessageToChatbot(message, 'user');
                 chatbotInput.value = '';
+
+                // Mostrar botón de terminar conversación si hay una conversación activa
+                if (chatbotState.step > 0) {
+                    chatbotFooter.style.display = 'block';
+                }
 
                 // Procesar respuesta del bot
                 setTimeout(() => {
@@ -3906,7 +3978,10 @@
                                 }, 500);
                             } else if (lowerMessage.includes('fifa') || lowerMessage.includes('mundial')) {
                                 // Cerrar el chatbot
-                                chatbotWindow.style.display = 'none';
+                                chatbotWindow.classList.remove('open');
+                                setTimeout(() => {
+                                    chatbotWindow.style.display = 'none';
+                                }, 300);
                                 
                                 // Abrir directamente el modal FIFA
                                 setTimeout(() => {
@@ -3993,10 +4068,14 @@
                                 // Esperar 2 segundos antes de redirigir
                                 setTimeout(() => {
                                     window.open(`https://wa.me/5215511406820?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-                                    chatbotWindow.style.display = 'none';
+                                    chatbotWindow.classList.remove('open');
+                                    setTimeout(() => {
+                                        chatbotWindow.style.display = 'none';
+                                    }, 300);
                                     
                                     // Resetear el estado del chatbot automáticamente
                                     resetChatbotState();
+                                    chatbotFooter.style.display = 'none';
                                 }, 2000);
                             } else {
                                 addMessageToChatbot('¿Qué dato te gustaría corregir?', 'bot');
@@ -4059,6 +4138,7 @@
                             } else if (lowerMessage.includes('volver') || lowerMessage.includes('inicio')) {
                                 // Volver al inicio
                                 resetChatbotState();
+                                chatbotFooter.style.display = 'none';
                                 addMessageToChatbot('¿En qué más puedo ayudarte?', 'bot');
                                 showQuickOptions([
                                     "Quiero hacer una reserva",

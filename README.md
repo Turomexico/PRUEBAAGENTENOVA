@@ -1,1 +1,1 @@
-Probando Agente Nova IA.
+Aplicacion de Gestion de Barbería 2026
